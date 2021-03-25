@@ -4,5 +4,5 @@ import 'package:MarketPlus/pages/home.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   'home': (BuildContext context) => Home(),
-  'login': (BuildContext context) => LogIn(),
+  'login': (BuildContext context) => LoginPage(),
 };
