@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:MarketPlus/emailPage.dart';
-import 'package:MarketPlus/register_page.dart';
-import 'package:MarketPlus/sigin_page.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 class LoginPage extends StatefulWidget {
   final String title;
@@ -42,47 +38,9 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 15.0,
             ),
-            FlatButton(
-              child: Text('Login'),
-              color: Colors.orangeAccent,
-              textColor: Colors.white,
-              onPressed: () {
-                FirebaseAuth.instance
-                    .signInWithEmailAndPassword(
-                  email: _emailController.text,
-                  password: _passwordController.text,
-                )
-                    .then((FirebaseUser user) {
-                  Navigator.of(context).pushReplacement(CupertinoPageRoute(
-                    builder: (context) => EmailScreen(),
-                  ));
-                }).catchError((e) {
-                  print(e);
-                });
-              },
-            ),
-            FlatButton(
-              child: Text('Register'),
-              color: Colors.green,
-              textColor: Colors.white,
-              onPressed: () => _pushPage(context, RegisterPage()),
-            ),
-            VerticalDivider(),
-            FlatButton(
-              child: Text('SigIn Page'),
-              color: Colors.green,
-              textColor: Colors.white,
-              onPressed: () => _pushPage(context, SignInPage()),
-            ),
           ],
         ),
       ),
     );
   }
-}
-
-void _pushPage(BuildContext context, Widget page) {
-  Navigator.of(context).push(
-    MaterialPageRoute<void>(builder: (_) => page),
-  );
 }
