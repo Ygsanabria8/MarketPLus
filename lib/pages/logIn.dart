@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 class LoginPage extends StatefulWidget {
-  final String title;
-  LoginPage({Key key, this.title}) : super(key: key);
+  
+  LoginPage({Key key}) : super(key: key);
   @override
   _LoginPageState createState() => _LoginPageState();
 }
