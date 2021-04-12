@@ -18,23 +18,38 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+        color: Colors.blue[600],
         child: Column(
           children: [
             Spacer(),
             Center(
-              child: FractionallySizedBox(
-                widthFactor: .6,
-                child: Image(image: AssetImage('Logo.png')),
-              ),
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.9,
+                height: MediaQuery.of(context).size.width * 0.6,
+                child: Image(
+                  image: AssetImage ('assets/img/Logo.png'),
+                ),
+              )
             ),
             Spacer(),
-            CircularProgressIndicator(),
+            CircularProgressIndicator(
+              valueColor:AlwaysStoppedAnimation<Color>(Colors.white),
+            ),
             Spacer(),
-            Text('Bienvenido')
+            Text(
+              'Bienvenido',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: MediaQuery.of(context).textScaleFactor * 30
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.1,
+            )
           ],
         ),
-      ),
+      )
     );
   }
 }
