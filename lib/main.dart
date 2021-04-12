@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:MarketPlus/routes.dart';
 import 'package:flutter/services.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -23,10 +22,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: 'login',
+      initialRoute: 'splashScreen',
       routes: routes,
     );
   }
 }
-
-
