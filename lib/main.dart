@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:MarketPlus/routes.dart';
 import 'package:flutter/services.dart';
@@ -16,12 +17,12 @@ class MyApp extends StatelessWidget {
     );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'GestureApp',
+      title: 'MarketPlus',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: 'login',
+      initialRoute: 'splashScreen',
       routes: routes,
     );
   }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "632663614921",
+    "project_id": "plusmarket-8973d",
+    "storage_bucket": "plusmarket-8973d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632663614921:android:2e569640fa4f1b9226f418",
+        "android_client_info": {
+          "package_name": "com.example.MarketPlus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632663614921-7kn5tnehsk9iqvriqcee8frds39nl7vh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDohXrJgvZuPWwQXMX6g8FWpx2HKj1XzLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632663614921-7kn5tnehsk9iqvriqcee8frds39nl7vh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
