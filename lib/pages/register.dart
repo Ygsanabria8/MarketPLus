@@ -1,16 +1,16 @@
 import 'package:MarketPlus/widgets/input.dart';
-import 'package:MarketPlus/widgets/input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:MarketPlus/widgets/input.dart';
-class LoginPage extends StatefulWidget {
+class RegisterPage extends StatefulWidget {
   
-  LoginPage({Key key}) : super(key: key);
+  RegisterPage({Key key}) : super(key: key);
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _RegisterPageState createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
+  TextEditingController _nameController = TextEditingController();
+  TextEditingController _apellidoController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
 
@@ -41,10 +41,10 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.03,
+                    height: MediaQuery.of(context).size.height * 0.05,
                   ),
                   Text(
-                    "Iniciar Sesion",
+                    "Registrarse",
                     style: TextStyle(
                       fontSize: MediaQuery.of(context).textScaleFactor * 30
                     ),
@@ -52,16 +52,24 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.08,
                   ),
-                  Campo(_emailController,label: 'email',),
+                  Campo(_nameController,label: 'Nombre',),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.02,
                   ),
-                  Campo(_passwordController,label: 'contraseña',),
+                  Campo(_apellidoController,label: 'Apellido',),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.03,
+                    height: MediaQuery.of(context).size.height * 0.02,
+                  ),
+                  Campo(_emailController,label: 'Correo electronico',),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.02,
+                  ),
+                  Campo(_passwordController,label: 'Contraseña',),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.02,
                   ),
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.7,
+                    width: MediaQuery.of(context).size.width * 0.6,
                     height: MediaQuery.of(context).size.height * 0.08,
                     child: RaisedButton(
                       shape: RoundedRectangleBorder(
@@ -76,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                         ), 
                       ),
                       color: Colors.blue[700],
-                      onPressed: () => Navigator.pushReplacementNamed(context, 'register'),
+                      onPressed: () => Navigator.pushReplacementNamed(context, ''),
                     ),
                   )
                 ],
