@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Future.delayed(
       Duration(seconds: 2),
-      () => Navigator.pushNamed(context, 'login')
+      () => Navigator.pushReplacementNamed(context, 'login')
     );
     super.initState();
   }
