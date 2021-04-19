@@ -64,7 +64,18 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.03,
                 ),
-                ButtonBlue(name: 'Registrate', onPressed: () => {Navigator.pushNamed(context, 'register'),},)
+                ButtonBlue(
+                  name: 'Registrate',
+                  onPressed: () => {
+                    Navigator.pushNamed(context, 'register'),
+                  },
+                ),
+                ButtonBlue(
+                  name: 'Iniciar Sesion',
+                  onPressed: () => {
+                    Navigator.pushNamed(context, 'splashScreen'),
+                  },
+                ),
               ],
             ),
           )
