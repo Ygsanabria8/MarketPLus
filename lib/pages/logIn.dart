@@ -1,9 +1,9 @@
 import 'package:MarketPlus/widgets/button-blue.dart';
+import 'package:MarketPlus/widgets/socialIcons.dart';
 import 'package:MarketPlus/widgets/input.dart';
 import 'package:MarketPlus/widgets/input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:MarketPlus/widgets/input.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -76,6 +76,19 @@ class _LoginPageState extends State<LoginPage> {
                     Navigator.pushNamed(context, 'splashScreen'),
                   },
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SocialIcons(
+                      iconSrc: "assets/img/facebook.svg",
+                      press: () {},
+                    ),
+                    SocialIcons(
+                      iconSrc: "assets/img/google-plus.svg",
+                      press: () {},
+                    ),
+                  ],
+                )
               ],
             ),
           )
