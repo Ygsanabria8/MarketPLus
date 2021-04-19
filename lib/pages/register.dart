@@ -94,7 +94,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     color: Colors.blue[700],
                     onPressed: () =>
-                        Navigator.pushReplacementNamed(context, ''),
+                        Navigator.pushNamed(context, 'register'),
                   ),
                 )
               ],

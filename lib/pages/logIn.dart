@@ -1,3 +1,4 @@
+import 'package:MarketPlus/widgets/button-blue.dart';
 import 'package:MarketPlus/widgets/input.dart';
 import 'package:MarketPlus/widgets/input.dart';
 import 'package:flutter/material.dart';
@@ -63,26 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.03,
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  height: MediaQuery.of(context).size.height * 0.08,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(40)),
-                    ),
-                    disabledColor: Colors.amber,
-                    child: Text(
-                      "Registrate",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: MediaQuery.of(context).textScaleFactor * 18,
-                      ),
-                    ),
-                    color: Colors.blue[700],
-                    onPressed: () =>
-                        Navigator.pushReplacementNamed(context, 'register'),
-                  ),
-                )
+                ButtonBlue(name: 'Registrate')
               ],
             ),
           )
