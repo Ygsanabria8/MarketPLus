@@ -65,33 +65,57 @@ class _LoginPageState extends State<LoginPage> {
                   height: MediaQuery.of(context).size.height * 0.03,
                 ),
                 ButtonBlue(
-                  name: 'Registrate',
-                  onPressed: () => {
-                    Navigator.pushNamed(context, 'register'),
-                  },
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
-                ),
-                ButtonBlue(
                   name: 'Iniciar Sesion',
                   onPressed: () => {
                     Navigator.pushNamed(context, 'home'),
                   },
                 ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     SocialIcons(
-                      iconSrc: "assets/img/facebook.svg",
+                      iconSrc: "assets/img/facebook_icon.png",
                       press: () {},
                     ),
                     SocialIcons(
-                      iconSrc: "assets/img/google-plus.svg",
+                      iconSrc: "assets/img/google-logo.png",
                       press: () {},
                     ),
                   ],
-                )
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 40),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Aun no tienes una cuenta?",
+                        style: TextStyle(
+                          fontSize: MediaQuery.of(context).textScaleFactor * 15,
+                          color: Colors.black
+                        ),
+                      ),
+                      GestureDetector(
+                        child: Text(
+                          " crear cuenta",
+                          style: TextStyle(
+                            fontSize: MediaQuery.of(context).textScaleFactor * 15,
+                            color: Colors.black,
+                            decoration: TextDecoration.underline,
+                          ), 
+                        ),
+                        onTap: () => {
+                          Navigator.pushNamed(context, 'register')
+                        },
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )
