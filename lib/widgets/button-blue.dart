@@ -4,9 +4,10 @@ import 'package:flutter/cupertino.dart';
 class ButtonBlue extends StatelessWidget {
 
   String name;
+  Function onPressed;
   TextEditingController controller;
 
-  ButtonBlue({Key key, this.name});
+  ButtonBlue({Key key, this.name, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +27,7 @@ class ButtonBlue extends StatelessWidget {
         ),
       ),
       color: Colors.blue[700],
-      onPressed: () =>
-        Navigator.pushNamed(context, 'register'),
+      onPressed: onPressed
       ),
     );
   }
