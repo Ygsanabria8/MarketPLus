@@ -70,10 +70,13 @@ class _LoginPageState extends State<LoginPage> {
                     Navigator.pushNamed(context, 'register'),
                   },
                 ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
                 ButtonBlue(
                   name: 'Iniciar Sesion',
                   onPressed: () => {
-                    Navigator.pushNamed(context, 'splashScreen'),
+                    Navigator.pushNamed(context, 'home'),
                   },
                 ),
               ],
