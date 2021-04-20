@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 ButtonBlue(
                   name: 'Iniciar Sesion',
                   onPressed: () => {
-                    Navigator.pushNamed(context, 'fruits'),
+                    Navigator.pushNamed(context, 'store'),
                   },
                 ),
                 SizedBox(

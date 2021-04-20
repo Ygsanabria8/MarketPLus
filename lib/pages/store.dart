@@ -23,40 +23,66 @@ class Store extends StatelessWidget {
       body: WillPopScope(
         onWillPop: () => null,
         child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 0.8,
           child: SingleChildScrollView(
-            padding: EdgeInsets.symmetric(horizontal: 40),
-            child: Container(
-                height: MediaQuery.of(context).size.height * 0.07,
-                width: MediaQuery.of(context).size.width * 0.1,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.grey[350],
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            child: Column(
+              children: [
+                SearchBar(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
                 ),
-                child: Column(
-                  children: [
-                    SearchBar(),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.1,
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  child: Text(
+                    "Categorias",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).textScaleFactor * 36,
+                      fontWeight: FontWeight.bold,
                     ),
-                    Container(
-                      height: 200,
-                      color: Colors.amberAccent,
-                      child: Text(
-                        "Categorias",
-                        style: TextStyle(
-                          fontSize: MediaQuery.of(context).textScaleFactor * 36,
-                          color: Colors.black
-                        ),
+                  ),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 100,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 50,
+                        color: Colors.amber,
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.1,
+                      ),
+                      Container(
+                        width: 100,
+                        height: 50,
+                        color: Colors.grey,
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.1,
+                      ),
+                      Container(
+                        width: 100,
+                        height: 50,
+                        color: Colors.black,
+                      ),
+                    ],
+                  )
                 ),
-              ),
+              ],
             ),
           ),
         ),
-      );
-    }
+      ),
+    );
+  }
 }
