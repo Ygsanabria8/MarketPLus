@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 ButtonBlue(
                   name: 'Iniciar Sesion',
                   onPressed: () => {
-                    Navigator.pushNamed(context, 'home'),
+                    Navigator.pushNamed(context, 'login'),
                   },
                 ),
                 SizedBox(
@@ -96,22 +96,21 @@ class _LoginPageState extends State<LoginPage> {
                       Text(
                         "Aun no tienes una cuenta?",
                         style: TextStyle(
-                          fontSize: MediaQuery.of(context).textScaleFactor * 15,
-                          color: Colors.black
-                        ),
+                            fontSize:
+                                MediaQuery.of(context).textScaleFactor * 15,
+                            color: Colors.black),
                       ),
                       GestureDetector(
                         child: Text(
                           " crear cuenta",
                           style: TextStyle(
-                            fontSize: MediaQuery.of(context).textScaleFactor * 15,
+                            fontSize:
+                                MediaQuery.of(context).textScaleFactor * 15,
                             color: Colors.black,
                             decoration: TextDecoration.underline,
-                          ), 
+                          ),
                         ),
-                        onTap: () => {
-                          Navigator.pushNamed(context, 'register')
-                        },
+                        onTap: () => {Navigator.pushNamed(context, 'register')},
                       ),
                     ],
                   ),
