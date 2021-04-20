@@ -1,3 +1,4 @@
+import 'package:MarketPlus/pages/store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -7,8 +8,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int indexTap = 1;
-  final List<Widget> widgetsChildren = [];
+  int indexTap = 0;
+  final List<Widget> widgetsChildren = [Store(),];
 
   void onTapTapped(int index) {
     setState(() {
@@ -21,7 +22,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFE3F2FD),
-      body: Container(),
+      body: widgetsChildren[indexTap],
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: Colors.white,
@@ -35,7 +36,7 @@ class _HomeState extends State<Home> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.home_filled,
+                Icons.local_mall_outlined,
                 color: Colors.black,
                 size: 40,
               ),
@@ -61,7 +62,7 @@ class _HomeState extends State<Home> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.local_mall_outlined,
+                Icons.add_shopping_cart_outlined,
                 color: Colors.black,
                 size: 40,
               ),
@@ -74,7 +75,7 @@ class _HomeState extends State<Home> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.miscellaneous_services_outlined,
+                Icons.account_circle_outlined,
                 color: Colors.black,
                 size: 40,
               ),
