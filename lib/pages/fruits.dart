@@ -1,4 +1,4 @@
-import 'package:MarketPlus/widgets/input.dart';
+import 'package:MarketPlus/widgets/searchBar.dart';
 import 'package:flutter/material.dart';
 
 class Fruits extends StatelessWidget {
@@ -11,6 +11,10 @@ class Fruits extends StatelessWidget {
             Image(
               image: AssetImage('assets/img/Bananos.jpg'),
             ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.03,
+            ),
+            SearchBar(),
           ],
         ),
       ),
