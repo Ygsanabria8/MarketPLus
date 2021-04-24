@@ -60,7 +60,7 @@ class ItemCard extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(40)),
                 ),
-                disabledColor: Colors.blue[200],
+                color: Colors.blue[300],
                 child: Row(
                   children: [
                     SizedBox(
@@ -82,7 +82,7 @@ class ItemCard extends StatelessWidget {
                     )
                   ],
                 ),
-                onPressed: null
+                onPressed: () => {print("hola")}
               ),
             ),
           ],

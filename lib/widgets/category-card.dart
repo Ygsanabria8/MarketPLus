@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class Category extends StatelessWidget {
+class CategoryCard extends StatelessWidget {
 
   String name;
   String imageUrl;
 
-  Category({Key key, this.name, this.imageUrl});
+  CategoryCard({Key key, this.name, this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, 'category'),
       child: Container(        
         width: MediaQuery.of(context).size.width * 0.3,
         decoration: BoxDecoration(

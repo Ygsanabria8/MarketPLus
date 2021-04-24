@@ -1,4 +1,4 @@
-import 'package:MarketPlus/widgets/category.dart';
+import 'package:MarketPlus/widgets/category-card.dart';
 import 'package:MarketPlus/widgets/item-card.dart';
 import 'package:MarketPlus/widgets/searchBar.dart';
 import 'package:flutter/material.dart';
@@ -56,21 +56,21 @@ class Store extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      Category(
+                      CategoryCard(
                         name: "Frutas",
                         imageUrl: "assets/img/watermelon.png",
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.03,
                       ),
-                      Category(
+                      CategoryCard(
                         name: "Verduras",
                         imageUrl: "assets/img/vegeatables.png",
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.03,
                       ),
-                      Category(
+                      CategoryCard(
                         name: "Aseo",
                         imageUrl: "assets/img/cleaning.png",
                       ),
