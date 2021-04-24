@@ -1,3 +1,4 @@
+import 'package:MarketPlus/widgets/button-blue.dart';
 import 'package:MarketPlus/widgets/input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,13 +23,13 @@ class _RegisterPageState extends State<RegisterPage> {
       child: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.35,
+            height: MediaQuery.of(context).size.height * 0.3,
             child: Image(
               image: AssetImage('assets/img/Logo.png'),
             ),
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.65,
+            height: MediaQuery.of(context).size.height * 0.7,
             width: MediaQuery.of(context).size.width,
             padding: EdgeInsets.symmetric(horizontal: 30),
             decoration: BoxDecoration(
@@ -49,52 +50,44 @@ class _RegisterPageState extends State<RegisterPage> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.08,
                 ),
-                InputText(
-                  controller: _nameController,
-                  label: 'Nombre',
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
-                ),
-                InputText(
-                  controller: _apellidoController,
-                  label: 'Apellido',
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
-                ),
-                InputText(
-                  controller: _emailController,
-                  label: 'Correo electronico',
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
-                ),
-                InputText(
-                  controller: _passwordController,
-                  label: 'Contraseña',
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
-                ),
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.6,
-                  height: MediaQuery.of(context).size.height * 0.08,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(40)),
-                    ),
-                    disabledColor: Colors.amber,
-                    child: Text(
-                      "Registrate",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: MediaQuery.of(context).textScaleFactor * 18,
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  child: Column(
+                    children: [
+                      InputText(
+                        controller: _nameController,
+                        label: 'Nombre',
                       ),
-                    ),
-                    color: Colors.blue[700],
-                    onPressed: () =>
-                        Navigator.pushNamed(context, 'register'),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.02,
+                      ),
+                      InputText(
+                        controller: _apellidoController,
+                        label: 'Apellido',
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.02,
+                      ),
+                      InputText(
+                        controller: _emailController,
+                        label: 'Correo electronico',
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.02,
+                      ),
+                      InputText(
+                        controller: _passwordController,
+                        label: 'Contraseña',
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.02,
+                      ),
+                      ButtonBlue(
+                        name: "Registrate",
+                        onPressed: () =>
+                            Navigator.pushNamed(context, 'register'),
+                      ),
+                    ],
                   ),
                 )
               ],
