@@ -1,3 +1,4 @@
+import 'package:MarketPlus/pages/account.dart';
 import 'package:MarketPlus/pages/store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -9,7 +10,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int indexTap = 0;
-  final List<Widget> widgetsChildren = [Store(),];
+  final List<Widget> widgetsChildren = [Store(),Store(),Store(),Account()];
 
   void onTapTapped(int index) {
     setState(() {
@@ -31,7 +32,7 @@ class _HomeState extends State<Home> {
         child: BottomNavigationBar(
           onTap: onTapTapped,
           currentIndex: indexTap,
-          elevation: 10,
+          elevation: 50,
           showUnselectedLabels: false,
           items: [
             BottomNavigationBarItem(
