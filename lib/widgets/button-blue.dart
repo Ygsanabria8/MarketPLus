@@ -18,7 +18,6 @@ class ButtonBlue extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(40)),
         ),
-        disabledColor: Colors.amber,
         child: Text(
           name,
           style: TextStyle(

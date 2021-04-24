@@ -1,4 +1,5 @@
 import 'package:MarketPlus/pages/account.dart';
+import 'package:MarketPlus/pages/shop.dart';
 import 'package:MarketPlus/pages/store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,7 +11,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int indexTap = 0;
-  final List<Widget> widgetsChildren = [Store(),Store(),Store(),Account()];
+  final List<Widget> widgetsChildren = [Store(),Store(),Shop(),Account()];
 
   void onTapTapped(int index) {
     setState(() {
