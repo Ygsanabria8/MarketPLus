@@ -7,12 +7,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:632663614921:android:2e569640fa4f1b9226f418",
+        "mobilesdk_app_id": "1:632663614921:android:fc06b6a98a7f5c5d26f418",
         "android_client_info": {
           "package_name": "com.example.MarketPlus"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "632663614921-oa68ou39t52q2hm6o7ldpuvb8vog54oa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.MarketPlus",
+            "certificate_hash": "d7b9a3ce7554e12e9813e45d2c48bd198548959b"
+          }
+        },
         {
           "client_id": "632663614921-7kn5tnehsk9iqvriqcee8frds39nl7vh.apps.googleusercontent.com",
           "client_type": 3

@@ -10,8 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
   meta: ^1.1.6
-  firebase_core: ^0.3.1+1
   firebase_auth: ^0.8.1+4
+  firebase_core: ^0.3.1+1
+  google_sign_in: ^4.4.4
   flutter_auth_buttons: ^0.3.1
   cupertino_icons: ^1.0.0
   flutter_svg: ^0.19.0
@@ -19,7 +20,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  google_sign_in: ^4.5.9
 
 flutter:
   uses-material-design: true

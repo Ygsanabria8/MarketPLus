@@ -4,6 +4,7 @@ import 'package:MarketPlus/widgets/input.dart';
 import 'package:MarketPlus/widgets/input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:MarketPlus/services/user.service.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -14,6 +15,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+  UserService userService = UserService.getInstance();
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +84,14 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     SocialIcons(
                       iconSrc: "assets/img/google-logo.png",
-                      press: () {},
+                      press: () {
+                        var user = userService.signInWithGoogle();
+                        if (user != null) {
+                          Navigator.pushNamed(context, 'home');
+                        } else {
+                          print('Usuario no valido');
+                        }
+                      },
                     ),
                   ],
                 ),
@@ -96,22 +105,21 @@ class _LoginPageState extends State<LoginPage> {
                       Text(
                         "Aun no tienes una cuenta?",
                         style: TextStyle(
-                          fontSize: MediaQuery.of(context).textScaleFactor * 15,
-                          color: Colors.black
-                        ),
+                            fontSize:
+                                MediaQuery.of(context).textScaleFactor * 15,
+                            color: Colors.black),
                       ),
                       GestureDetector(
                         child: Text(
                           " crear cuenta",
                           style: TextStyle(
-                            fontSize: MediaQuery.of(context).textScaleFactor * 15,
+                            fontSize:
+                                MediaQuery.of(context).textScaleFactor * 15,
                             color: Colors.black,
                             decoration: TextDecoration.underline,
-                          ), 
+                          ),
                         ),
-                        onTap: () => {
-                          Navigator.pushNamed(context, 'register')
-                        },
+                        onTap: () => {Navigator.pushNamed(context, 'register')},
                       ),
                     ],
                   ),
