@@ -52,25 +52,32 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.08,
                 ),
-                InputText(
-                  controller: _emailController,
-                  label: 'email',
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
-                ),
-                InputText(
-                  controller: _passwordController,
-                  label: 'contraseña',
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.03,
-                ),
-                ButtonBlue(
-                  name: 'Iniciar Sesion',
-                  onPressed: () => {
-                    Navigator.pushNamed(context, 'home'),
-                  },
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  child: Column(
+                    children: [
+                      InputText(
+                        controller: _emailController,
+                        label: 'email',
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.02,
+                      ),
+                      InputText(
+                        controller: _passwordController,
+                        label: 'contraseña',
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.03,
+                      ),
+                      ButtonBlue(
+                        name: 'Iniciar Sesion',
+                        onPressed: () => {
+                          Navigator.pushNamed(context, 'home'),
+                        },
+                      ),
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.02,
