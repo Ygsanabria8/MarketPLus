@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "632663614921",
-    "project_id": "plusmarket-8973d",
-    "storage_bucket": "plusmarket-8973d.appspot.com"
+    "project_number": "952779227319",
+    "project_id": "marketplus-19d7b",
+    "storage_bucket": "marketplus-19d7b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:632663614921:android:fc06b6a98a7f5c5d26f418",
+        "mobilesdk_app_id": "1:952779227319:android:3dc62b50f6ffc419708d32",
         "android_client_info": {
           "package_name": "com.example.MarketPlus"
         }
       },
       "oauth_client": [
         {
-          "client_id": "632663614921-oa68ou39t52q2hm6o7ldpuvb8vog54oa.apps.googleusercontent.com",
+          "client_id": "952779227319-uhfajhdu5clipe7o007biq0lj0sh60ha.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.MarketPlus",
@@ -22,20 +22,20 @@
           }
         },
         {
-          "client_id": "632663614921-7kn5tnehsk9iqvriqcee8frds39nl7vh.apps.googleusercontent.com",
+          "client_id": "952779227319-6n0ng8rt6ubb78jffqpjp5s3gljesdlc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDohXrJgvZuPWwQXMX6g8FWpx2HKj1XzLs"
+          "current_key": "AIzaSyCykn5drHPIsUeOulW2oBJB5BHhUHJFvN4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "632663614921-7kn5tnehsk9iqvriqcee8frds39nl7vh.apps.googleusercontent.com",
+              "client_id": "952779227319-6n0ng8rt6ubb78jffqpjp5s3gljesdlc.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
