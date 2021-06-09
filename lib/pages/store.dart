@@ -1,3 +1,4 @@
+import 'package:MarketPlus/services/products.service.dart';
 import 'package:MarketPlus/widgets/category-card.dart';
 import 'package:MarketPlus/widgets/item-card.dart';
 import 'package:MarketPlus/widgets/searchBar.dart';
@@ -53,29 +54,24 @@ class Store extends StatelessWidget {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 0.15,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      CategoryCard(
-                        name: "Frutas",
-                        imageUrl: "assets/img/watermelon.png",
-                      ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.03,
-                      ),
-                      CategoryCard(
-                        name: "Verduras",
-                        imageUrl: "assets/img/vegeatables.png",
-                      ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.03,
-                      ),
-                      CategoryCard(
-                        name: "Aseo",
-                        imageUrl: "assets/img/cleaning.png",
-                      ),
-                    ],
-                  )
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: products.length,
+                      itemBuilder: (context, index){
+                        return Row(
+                          children: [
+                            CategoryCard(
+                              imageUrl: products[index]['imageUrl'],
+                              name: products[index]['type'],
+                              indexElement: index
+                            ),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.03,
+                            ),
+                          ],
+                        );
+                      }
+                  ),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.04,

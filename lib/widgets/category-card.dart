@@ -1,3 +1,4 @@
+import 'package:MarketPlus/pages/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -5,13 +6,17 @@ class CategoryCard extends StatelessWidget {
 
   String name;
   String imageUrl;
+  int indexElement;
 
-  CategoryCard({Key key, this.name, this.imageUrl});
+  CategoryCard({Key key, this.name, this.imageUrl, this.indexElement});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, 'category'),
+      onTap: () => Navigator.push(context,MaterialPageRoute(
+              builder: (context) => CategoryPage(indexElement: indexElement)
+        ),
+      ),
       child: Container(        
         width: MediaQuery.of(context).size.width * 0.3,
         decoration: BoxDecoration(

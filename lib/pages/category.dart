@@ -1,10 +1,17 @@
+import 'package:MarketPlus/services/products.service.dart';
 import 'package:MarketPlus/widgets/item-card.dart';
 import 'package:MarketPlus/widgets/searchBar.dart';
 import 'package:flutter/material.dart';
 
 class CategoryPage extends StatelessWidget {
+
+  final indexElement;
+  CategoryPage({this.indexElement});
+
   @override
   Widget build(BuildContext context) {
+    final items = [];
+    items.addAll(products[indexElement]['products']);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -20,8 +27,7 @@ class CategoryPage extends StatelessWidget {
         onWillPop: () {
           Navigator.pop(context);
         },
-        child: SingleChildScrollView(
-          child: Container(
+        child: Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
@@ -31,69 +37,30 @@ class CategoryPage extends StatelessWidget {
                 ),
                 Container(
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.3,
-                    child: Row(
-                      children: [
-                        ItemCard(
-                          name: "Maracuya",
-                          imageUrl: "assets/img/cleaning.png",
-                        ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.03,
-                        ),
-                        ItemCard(
-                          name: "Maracuya",
-                          imageUrl: "assets/img/cleaning.png",
-                        ),
-                      ],
-                    )),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
-                ),
-                Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.3,
-                    child: Row(
-                      children: [
-                        ItemCard(
-                          name: "Maracuya",
-                          imageUrl: "assets/img/cleaning.png",
-                        ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.03,
-                        ),
-                        ItemCard(
-                          name: "Maracuya",
-                          imageUrl: "assets/img/cleaning.png",
-                        ),
-                      ],
-                    )),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  child: Row(
-                    children: [
-                      ItemCard(
-                        name: "Maracuya",
-                        imageUrl: "assets/img/cleaning.png",
-                      ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.03,
-                      ),
-                      ItemCard(
-                        name: "Maracuya",
-                        imageUrl: "assets/img/cleaning.png",
-                      ),
-                    ],
-                  ),
+                    height: MediaQuery.of(context).size.height * 0.7,
+                    child: ListView.builder(
+
+                        itemCount: items.length,
+                        itemBuilder: (context,index){
+                          return Column(
+                            children: [
+                              //crear un card que ocupe todo el ancho en un solo producto
+                              ItemCard(
+                                name: items[index]['productName'],
+                                imageUrl: "assets/img/cleaning.png",
+                              ),
+                              SizedBox(
+                                height: MediaQuery.of(context).size.height * 0.03,
+                              ),
+                            ],
+                          );
+                        }
+                    ),
                 ),
               ],
             ),
           ),
-        ),
+
       ),
     );
   }
