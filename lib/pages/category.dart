@@ -1,5 +1,5 @@
 import 'package:MarketPlus/services/products.service.dart';
-import 'package:MarketPlus/widgets/item-card.dart';
+import 'package:MarketPlus/widgets/ItemCardExtend.dart';
 import 'package:MarketPlus/widgets/searchBar.dart';
 import 'package:flutter/material.dart';
 
@@ -36,18 +36,17 @@ class CategoryPage extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
                 Container(
-                    width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height * 0.7,
                     child: ListView.builder(
-
                         itemCount: items.length,
                         itemBuilder: (context,index){
                           return Column(
                             children: [
                               //crear un card que ocupe todo el ancho en un solo producto
-                              ItemCard(
+                              ItemCardExtend(
                                 name: items[index]['productName'],
-                                imageUrl: "assets/img/cleaning.png",
+                                price: items[index]['price'],
+                                imageUrl: items[index]['imageUrl'],
                               ),
                               SizedBox(
                                 height: MediaQuery.of(context).size.height * 0.03,
