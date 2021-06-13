@@ -1,4 +1,3 @@
-import 'package:MarketPlus/widgets/searchBar.dart';
 import 'package:flutter/material.dart';
 
 class Fruits extends StatelessWidget {
@@ -14,7 +13,6 @@ class Fruits extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            SearchBar(),
           ],
         ),
       ),

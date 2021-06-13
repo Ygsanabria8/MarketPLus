@@ -4,9 +4,11 @@ import 'package:flutter/cupertino.dart';
 class ItemCard extends StatelessWidget {
 
   String name;
+  String price;
   String imageUrl;
+  String sales;
 
-  ItemCard({Key key, this.name, this.imageUrl});
+  ItemCard({Key key, this.name, this.imageUrl,this.price,this.sales});
 
   @override
   Widget build(BuildContext context) {
@@ -32,15 +34,33 @@ class ItemCard extends StatelessWidget {
             Image(
               image: AssetImage(imageUrl),
               width: 70,
+              height: 80,
             ),
-            Text(
-              "1900 - lb",
-              style: TextStyle(
-                color: Colors.green[700],
-                fontSize: MediaQuery.of(context).textScaleFactor * 28,
-                letterSpacing: 1.7,
-                fontWeight: FontWeight.w600
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "$price",
+                  style: TextStyle(
+                      color: Colors.green[700],
+                      fontSize: MediaQuery.of(context).textScaleFactor * 28,
+                      letterSpacing: 1.7,
+                      fontWeight: FontWeight.w600
+                  ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.02,
+                ),
+                Text(
+                  "$sales",
+                  style: TextStyle(
+                      color: Colors.green[700],
+                      fontSize: MediaQuery.of(context).textScaleFactor * 18,
+                      letterSpacing: 1.7,
+                      fontWeight: FontWeight.w600
+                  ),
+                ),
+              ],
             ),
             Text(
               name,

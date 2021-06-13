@@ -6,8 +6,9 @@ class ItemCardExtend extends StatelessWidget {
   String name;
   String price;
   String imageUrl;
+  String sale;
 
-  ItemCardExtend({Key key, this.name, this.imageUrl, this.price});
+  ItemCardExtend({Key key, this.name, this.imageUrl, this.price,this.sale});
 
   @override
   Widget build(BuildContext context) {
@@ -45,14 +46,31 @@ class ItemCardExtend extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Text(
-                    "1900 - lb",
-                    style: TextStyle(
-                        color: Colors.green[700],
-                        fontSize: MediaQuery.of(context).textScaleFactor * 28,
-                        letterSpacing: 1.7,
-                        fontWeight: FontWeight.w600
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "$price",
+                        style: TextStyle(
+                            color: Colors.green[700],
+                            fontSize: MediaQuery.of(context).textScaleFactor * 28,
+                            letterSpacing: 1.7,
+                            fontWeight: FontWeight.w600
+                        ),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.02,
+                      ),
+                      Text(
+                        "$sale",
+                        style: TextStyle(
+                            color: Colors.green[700],
+                            fontSize: MediaQuery.of(context).textScaleFactor * 18,
+                            letterSpacing: 1.7,
+                            fontWeight: FontWeight.w600
+                        ),
+                      ),
+                    ],
                   ),
                   Text(
                     name,

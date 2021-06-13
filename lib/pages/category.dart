@@ -1,10 +1,8 @@
 import 'package:MarketPlus/services/products.service.dart';
 import 'package:MarketPlus/widgets/ItemCardExtend.dart';
-import 'package:MarketPlus/widgets/searchBar.dart';
 import 'package:flutter/material.dart';
 
 class CategoryPage extends StatelessWidget {
-
   final indexElement;
   CategoryPage({this.indexElement});
 
@@ -28,38 +26,45 @@ class CategoryPage extends StatelessWidget {
           Navigator.pop(context);
         },
         child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              children: [
-                SearchBar(),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.05,
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              Text(
+                products[indexElement]['type'],
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: MediaQuery.of(context).textScaleFactor * 40,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: 2,
                 ),
-                Container(
-                    height: MediaQuery.of(context).size.height * 0.7,
-                    child: ListView.builder(
-                        itemCount: items.length,
-                        itemBuilder: (context,index){
-                          return Column(
-                            children: [
-                              //crear un card que ocupe todo el ancho en un solo producto
-                              ItemCardExtend(
-                                name: items[index]['productName'],
-                                price: items[index]['price'],
-                                imageUrl: items[index]['imageUrl'],
-                              ),
-                              SizedBox(
-                                height: MediaQuery.of(context).size.height * 0.03,
-                              ),
-                            ],
-                          );
-                        }
-                    ),
-                ),
-              ],
-            ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height * 0.75,
+                child: ListView.builder(
+                    itemCount: items.length,
+                    itemBuilder: (context, index) {
+                      return Column(
+                        children: [
+                          //crear un card que ocupe todo el ancho en un solo producto
+                          ItemCardExtend(
+                            name: items[index]['productName'],
+                            price: items[index]['price'],
+                            imageUrl: items[index]['imageUrl'],
+                            sale: items[index]['sale'],
+                          ),
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.03,
+                          ),
+                        ],
+                      );
+                    }),
+              ),
+            ],
           ),
-
+        ),
       ),
     );
   }

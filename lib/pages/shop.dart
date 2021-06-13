@@ -39,7 +39,7 @@ class Shop extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.03,
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.57,
+                  height: MediaQuery.of(context).size.height * 0.55,
                   child: SingleChildScrollView(
                     child: Column(
                       children: [

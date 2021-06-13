@@ -6,52 +6,62 @@ final products = [
       {
         "productName": "Jabón en polvo",
         "price": "2.500",
-        "imageUrl": "assets/img/jabonPolvo.jpg"
+        "imageUrl": "assets/img/jabonPolvo.jpg",
+        "sale": ""
       },
       {
         "productName": "Escoba",
         "price": "1.500",
-        "imageUrl": "assets/img/Escoba.jpg"
+        "imageUrl": "assets/img/Escoba.jpg",
+        "sale": ""
       },
       {
         "productName": "Limpia vidrios",
         "price": "4.500",
-        "imageUrl": "assets/img/Limpiavidrios.jpg"
+        "imageUrl": "assets/img/Limpiavidrios.jpg",
+        "sale": ""
       },
       {
         "productName": "Ambientador",
         "price": "8.900",
-        "imageUrl": "assets/img/Ambientador.jpg"
+        "imageUrl": "assets/img/Ambientador.jpg",
+        "sale": ""
       },
       {
         "productName": "Gel Antibacterial",
         "price": "12.500",
-        "imageUrl": "assets/img/Antibacterial.jpg"
+        "imageUrl": "assets/img/Antibacterial.jpg",
+        "sale": ""
       },
       {
         "productName": "Trapero",
         "price": "5.500",
-        "imageUrl": "assets/img/Trapero.jpg"
+        "imageUrl": "assets/img/Trapero.jpg",
+        "sale": ""
       },
       {
         "productName": "Guantes",
         "price": "4.000",
-        "imageUrl": "assets/img/Guantes.jpeg"
+        "imageUrl": "assets/img/Guantes.jpeg",
+        "sale": ""
       },
       {
         "productName": "Toallas de Cocina",
         "price": "5.000",
-        "imageUrl": "assets/img/toallasCocina.jpg"
+        "imageUrl": "assets/img/toallasCocina.jpg",
+        "sale": ""
       },
       {
         "productName": "Fabuloso",
         "price": "4.500",
-        "imageUrl": "assets/img/Fabuloso.jpg"
+        "imageUrl": "assets/img/Fabuloso.jpg",
+        "sale": ""
       },
       {
-        "productName": "Decol",
+        "productName": "Blancox",
         "price": "5.000",
-        "imageUrl": "assets/img/Blancox.jpg"
+        "imageUrl": "assets/img/Blancox.jpg",
+        "sale": ""
       }
     ]
   },
@@ -62,52 +72,50 @@ final products = [
       {
         "productName": "1 lb Manzanas",
         "price": "6.000",
-        "imageUrl": "assets/img/Mazana.jpg"
+        "imageUrl": "assets/img/Mazana.jpg",
+        "sale": ""
       },
       {
         "productName": "1 lb Papaya",
         "price": "5.400",
-        "imageUrl": "assets/img/papaya.jpg"
+        "imageUrl": "assets/img/papaya.jpg",
+        "sale": ""
       },
       {
         "productName": "1 lb Bananos",
         "price": "2.800",
-        "imageUrl": "assets/img/banano.jpg"
+        "imageUrl": "assets/img/banano.jpg",
+        "sale": ""
       },
       {
         "productName": "1 lb de Peras",
         "price": "2.100",
-        "imageUrl": "assets/img/peras.jpg"
-      },
-      {
-        "productName": "Manzanas",
-        "price": "800",
-        "imageUrl": "assets/img/Blancox.jpg"
-      },
-      {
-        "productName": "Papaya",
-        "price": "1.000",
-        "imageUrl": "assets/img/Blancox.jpg"
+        "imageUrl": "assets/img/peras.jpg",
+        "sale": ""
       },
       {
         "productName": "1 lb Uva",
         "price": "2.850",
-        "imageUrl": "assets/img/Uva.jpg"
+        "imageUrl": "assets/img/Uva.jpg",
+        "sale": ""
       },
       {
         "productName": "1 lb melon",
         "price": "4.500",
-        "imageUrl": "assets/img/melon.jpeg"
+        "imageUrl": "assets/img/melon.jpeg",
+        "sale": ""
       },
       {
         "productName": "1 lb fresas",
         "price": "3.800",
-        "imageUrl": "assets/img/fresas.jpeg"
+        "imageUrl": "assets/img/fresas.jpeg",
+        "sale": ""
       },
       {
         "productName": "Papaya",
         "price": "1.000",
-        "imageUrl": "assets/img/naranja.jpg"
+        "imageUrl": "assets/img/naranja.jpg",
+        "sale": ""
       },
     ]
   },
@@ -118,48 +126,56 @@ final products = [
       {
         "productName": "Espinaca",
         "price": "2.500",
-        "imageUrl": "assets/img/espinaca.jpg"
+        "imageUrl": "assets/img/espinaca.jpg",
+        "sale": ""
       },
       {
         "productName": "Lechuga",
         "price": "1.500",
-        "imageUrl": "assets/img/lechuga.jpg"
+        "imageUrl": "assets/img/lechuga.jpg",
+        "sale": ""
       },
-      {"productName": "Espinaca", "price": "2.500", "imageUrl": "assets/img/"},
       {
         "productName": "Brocoli",
         "price": "1.500",
-        "imageUrl": "assets/img/brocoli.jpg"
+        "imageUrl": "assets/img/brocoli.jpg",
+        "sale": ""
       },
       {
         "productName": "Zanahorias",
         "price": "2.500",
-        "imageUrl": "assets/img/zanahorias.jpg"
+        "imageUrl": "assets/img/zanahorias.jpg",
+        "sale": "-25%"
       },
       {
         "productName": "Tomate",
         "price": "1.500",
-        "imageUrl": "assets/img/Tomate.jpg"
+        "imageUrl": "assets/img/Tomate.jpg",
+        "sale": "-15%"
       },
       {
         "productName": "Ajo",
         "price": "2.500",
-        "imageUrl": "assets/img/Ajo.jpg"
+        "imageUrl": "assets/img/Ajo.jpg",
+        "sale": "-5%"
       },
       {
         "productName": "Cebolla",
         "price": "1.500",
-        "imageUrl": "assets/img/cebolla.jpg"
+        "imageUrl": "assets/img/cebolla.jpg",
+        "sale": "-50%"
       },
       {
         "productName": "Pimenton",
         "price": "2.500",
-        "imageUrl": "assets/img/Pimenton.jpg"
+        "imageUrl": "assets/img/Pimenton.jpg",
+        "sale": ""
       },
       {
         "productName": "Coliflor",
         "price": "1.500",
-        "imageUrl": "assets/img/Coliflor.jpeg"
+        "imageUrl": "assets/img/Coliflor.jpeg",
+        "sale": ""
       }
     ]
   },
@@ -169,22 +185,26 @@ final productsRecomend = [
   {
     "productName": "1 lb Bananos",
     "price": "2.800",
-    "imageUrl": "assets/img/banano.jpg"
+    "imageUrl": "assets/img/banano.jpg",
+    "sale": ""
   },
   {
     "productName": "Pimenton",
     "price": "2.500",
-    "imageUrl": "assets/img/Pimenton.jpg"
+    "imageUrl": "assets/img/Pimenton.jpg",
+    "sale": ""
   },
   {
     "productName": "Fabuloso",
     "price": "4.500",
-    "imageUrl": "assets/img/Fabuloso.jpg"
+    "imageUrl": "assets/img/Fabuloso.jpg",
+    "sale": ""
   },
   {
     "productName": "Guantes",
     "price": "4.000",
-    "imageUrl": "assets/img/Guantes.jpeg"
+    "imageUrl": "assets/img/Guantes.jpeg",
+    "sale": ""
   },
 ];
 
@@ -192,17 +212,25 @@ final sales = [
   {
     "productName": "Zanahorias",
     "price": "2.500",
-    "imageUrl": "assets/img/zanahorias.jpg"
+    "imageUrl": "assets/img/zanahorias.jpg",
+    "sale": "-25%"
   },
   {
     "productName": "Cebolla",
     "price": "1.500",
-    "imageUrl": "assets/img/cebolla.jpg"
+    "imageUrl": "assets/img/cebolla.jpg",
+    "sale": "-50%"
   },
-  {"productName": "Ajo", "price": "2.500", "imageUrl": "assets/img/Ajo.jpg"},
+  {
+    "productName": "Ajo",
+    "price": "2.500",
+    "imageUrl": "assets/img/Ajo.jpg",
+    "sale": "-5%"
+  },
   {
     "productName": "Tomate",
     "price": "1.500",
-    "imageUrl": "assets/img/Tomate.jpg"
+    "imageUrl": "assets/img/Tomate.jpg",
+    "sale": "-15%"
   },
 ];

@@ -11,7 +11,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int indexTap = 0;
-  final List<Widget> widgetsChildren = [Store(),Store(),Shop(),Account()];
+  final List<Widget> widgetsChildren = [Store(),Shop(),Account()];
 
   void onTapTapped(int index) {
     setState(() {
@@ -43,20 +43,7 @@ class _HomeState extends State<Home> {
                 size: 40,
               ),
               title: Text(
-                "Mi cuenta",
-                style: TextStyle(
-                  fontSize: MediaQuery.of(context).textScaleFactor * 14,
-                ),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.favorite_outline_outlined,
-                color: Colors.black,
-                size: 40,
-              ),
-              title: Text(
-                "Home",
+                "Tienda",
                 style: TextStyle(
                   fontSize: MediaQuery.of(context).textScaleFactor * 14,
                 ),
@@ -69,7 +56,7 @@ class _HomeState extends State<Home> {
                 size: 40,
               ),
               title: Text(
-                "Ayuda",
+                "Mi carrito",
                 style: TextStyle(
                   fontSize: MediaQuery.of(context).textScaleFactor * 14,
                 ),
@@ -82,7 +69,7 @@ class _HomeState extends State<Home> {
                 size: 40,
               ),
               title: Text(
-                "Ayuda",
+                "Mi cuenta",
                 style: TextStyle(
                   fontSize: MediaQuery.of(context).textScaleFactor * 14,
                 ),
