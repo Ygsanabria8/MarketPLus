@@ -7,7 +7,6 @@ void ModalRegister(BuildContext context, String urlImage, String message,
   showModalBottomSheet(
     barrierColor: Colors.blue[600].withOpacity(0.6),
     backgroundColor: Colors.transparent,
-    isDismissible: false,
     context: context,
     builder: (context) => Container(
       decoration: BoxDecoration(

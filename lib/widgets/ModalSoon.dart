@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'button-blue.dart';
 
-void ModalLogin(BuildContext context, String urlImage, String message)  {
-   showModalBottomSheet(
+void ModalSoon(BuildContext context)  {
+  showModalBottomSheet(
     barrierColor: Colors.blue[600].withOpacity(0.6),
     backgroundColor: Colors.transparent,
     context: context,
@@ -40,39 +40,39 @@ void ModalLogin(BuildContext context, String urlImage, String message)  {
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
               Image(
-                image: AssetImage(urlImage),
+                image: AssetImage('assets/img/alert.png'),
                 height: 80,
                 width: 80,
               ),
               SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.03,
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
               Text(
-                message,
+                'Contaremos muy pronto con este servicio, agradecemos tu comprensión.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.indigo[600]
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.indigo[600]
                 ),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
               ButtonBlue(
-                name: 'VOLVER A INTENTAR',
+                name: 'REGISTRARME',
                 onPressed: () => {
-                  Navigator.pop(context)
+                  Navigator.pushReplacementNamed(context, 'register')
                 },
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushReplacementNamed(context, 'register');
+                  Navigator.pop(context);
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20),
                   child: Text(
-                    'REGISTRATE',
+                    'YA TENGO UNA CUENTA',
                     style: TextStyle(
                       color: Colors.indigo[600],
                       fontFamily: "Poppins",

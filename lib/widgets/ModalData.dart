@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'button-blue.dart';
 
-void ModalLogin(BuildContext context, String urlImage, String message)  {
-   showModalBottomSheet(
+void ModalData(BuildContext context)  {
+  showModalBottomSheet(
     barrierColor: Colors.blue[600].withOpacity(0.6),
     backgroundColor: Colors.transparent,
     context: context,
@@ -40,20 +40,20 @@ void ModalLogin(BuildContext context, String urlImage, String message)  {
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
               Image(
-                image: AssetImage(urlImage),
+                image: AssetImage('assets/img/alert.png'),
                 height: 80,
                 width: 80,
               ),
               SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.03,
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
               Text(
-                message,
+                'Por favor ingresa los datos requeridos.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.indigo[600]
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.indigo[600]
                 ),
               ),
               SizedBox(
@@ -65,23 +65,8 @@ void ModalLogin(BuildContext context, String urlImage, String message)  {
                   Navigator.pop(context)
                 },
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushReplacementNamed(context, 'register');
-                },
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: Text(
-                    'REGISTRATE',
-                    style: TextStyle(
-                      color: Colors.indigo[600],
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 1.2,
-                      fontSize: 15,
-                    ),
-                  ),
-                ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
             ],
           ),
