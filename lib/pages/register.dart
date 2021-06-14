@@ -1,3 +1,4 @@
+import 'package:MarketPlus/services/user.service.dart';
 import 'package:MarketPlus/widgets/button-blue.dart';
 import 'package:MarketPlus/widgets/input.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  UserService userService = UserService.getInstance();
   TextEditingController _nameController = TextEditingController();
   TextEditingController _apellidoController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
@@ -83,9 +85,14 @@ class _RegisterPageState extends State<RegisterPage> {
                         height: MediaQuery.of(context).size.height * 0.02,
                       ),
                       ButtonBlue(
-                        name: "Registrate",
-                        onPressed: () =>
-                            Navigator.pushNamed(context, 'register'),
+                        name: "REGISTRATE",
+                        onPressed: () => userService.register(
+                            _emailController.text,
+                            _passwordController.text,
+                            _nameController.text,
+                            _apellidoController.text,
+                            context),
+                        //Navigator.pushNamed(context, 'register'),
                       ),
                     ],
                   ),

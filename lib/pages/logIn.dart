@@ -71,9 +71,10 @@ class _LoginPageState extends State<LoginPage> {
                         height: MediaQuery.of(context).size.height * 0.03,
                       ),
                       ButtonBlue(
-                        name: 'Iniciar Sesion',
+                        name: 'INICIAR SESIÓN',
                         onPressed: () => {
-                          Navigator.pushNamed(context, 'home'),
+                          userService.login(_emailController.text,
+                              _passwordController.text, context),
                         },
                       ),
                     ],
