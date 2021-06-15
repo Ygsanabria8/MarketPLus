@@ -54,6 +54,7 @@ class CategoryPage extends StatelessWidget {
                             price: items[index]['price'],
                             imageUrl: items[index]['imageUrl'],
                             sale: items[index]['sale'],
+                            product: items[index],
                           ),
                           SizedBox(
                             height: MediaQuery.of(context).size.height * 0.03,

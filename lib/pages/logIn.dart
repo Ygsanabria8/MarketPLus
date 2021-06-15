@@ -2,8 +2,6 @@ import 'package:MarketPlus/widgets/ModalData.dart';
 import 'package:MarketPlus/widgets/ModalSoon.dart';
 import 'package:MarketPlus/widgets/button-blue.dart';
 import 'package:MarketPlus/widgets/socialIcons.dart';
-import 'package:MarketPlus/widgets/input.dart';
-import 'package:MarketPlus/widgets/input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:MarketPlus/services/user.service.dart';

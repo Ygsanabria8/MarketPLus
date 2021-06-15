@@ -2,22 +2,21 @@ import 'package:MarketPlus/services/user.service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class ItemCardExtend extends StatelessWidget {
+class ItemCardShop extends StatelessWidget {
   String name;
   String price;
   String imageUrl;
   String sale;
-  dynamic product;
   var userService = UserService.getInstance();
 
-  ItemCardExtend(
-      {Key key, this.name, this.imageUrl, this.price, this.sale, this.product});
+  ItemCardShop(
+      {Key key, this.name, this.imageUrl, this.price, this.sale});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.2,
+      width: MediaQuery.of(context).size.width * 0.9,
+      height: MediaQuery.of(context).size.height * 0.12,
       decoration: BoxDecoration(
           border: Border.all(color: Colors.black),
           borderRadius: BorderRadius.all(Radius.circular(30))),
@@ -25,14 +24,6 @@ class ItemCardExtend extends StatelessWidget {
         children: [
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.01,
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 15),
-            alignment: Alignment.centerLeft,
-            child: Icon(
-              Icons.favorite_outline_outlined,
-              color: Colors.red,
-            ),
           ),
           Row(
             children: [
@@ -56,7 +47,7 @@ class ItemCardExtend extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.green[700],
                             fontSize:
-                                MediaQuery.of(context).textScaleFactor * 28,
+                            MediaQuery.of(context).textScaleFactor * 28,
                             letterSpacing: 1.7,
                             fontWeight: FontWeight.w600),
                       ),
@@ -68,7 +59,7 @@ class ItemCardExtend extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.green[700],
                             fontSize:
-                                MediaQuery.of(context).textScaleFactor * 18,
+                            MediaQuery.of(context).textScaleFactor * 18,
                             letterSpacing: 1.7,
                             fontWeight: FontWeight.w600),
                       ),
@@ -83,41 +74,6 @@ class ItemCardExtend extends StatelessWidget {
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.01,
-                  ),
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    height: MediaQuery.of(context).size.height * 0.05,
-                    child: RaisedButton(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(40)),
-                        ),
-                        color: Colors.blue[300],
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.02,
-                            ),
-                            Text(
-                              "Agregar",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize:
-                                    MediaQuery.of(context).textScaleFactor * 20,
-                              ),
-                            ),
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.06,
-                            ),
-                            Icon(
-                              Icons.local_grocery_store_outlined,
-                              color: Colors.white,
-                            )
-                          ],
-                        ),
-                        onPressed: () => {
-                          userService.addProduct(product),
-                        },
-                    ),
                   ),
                 ],
               ),

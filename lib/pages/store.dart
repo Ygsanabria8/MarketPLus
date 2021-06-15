@@ -2,7 +2,6 @@ import 'package:MarketPlus/services/products.service.dart';
 import 'package:MarketPlus/widgets/category-card.dart';
 import 'package:MarketPlus/widgets/item-card.dart';
 import 'package:flutter/material.dart';
-import 'package:MarketPlus/services/products.service.dart';
 
 class Store extends StatelessWidget {
   @override
@@ -12,11 +11,6 @@ class Store extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         brightness: Brightness.light,
-        iconTheme: IconThemeData(color: Colors.black),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_outlined),
-          onPressed: () => (print("Doy atras")),
-        ),
       ),
       body: WillPopScope(
         onWillPop: () => null,
@@ -82,6 +76,7 @@ class Store extends StatelessWidget {
                               price: productsRecomend[index]['price'],
                               imageUrl: productsRecomend[index]['imageUrl'],
                               sales: productsRecomend[index]['sale'],
+                              product: productsRecomend[index],
                             ),
                             SizedBox(
                               width: MediaQuery.of(context).size.width * 0.03,
@@ -121,6 +116,7 @@ class Store extends StatelessWidget {
                               price: sales[index]['price'],
                               imageUrl: sales[index]['imageUrl'],
                               sales: sales[index]['sale'],
+                              product: sales[index],
                             ),
                             SizedBox(
                               width: MediaQuery.of(context).size.width * 0.03,

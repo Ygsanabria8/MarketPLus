@@ -1,19 +1,21 @@
-import 'package:MarketPlus/widgets/input.dart';
+import 'package:MarketPlus/services/user.service.dart';
+import 'package:MarketPlus/widgets/button-blue.dart';
 import 'package:flutter/material.dart';
 
 class Account extends StatelessWidget {
+
+  TextEditingController _emailController = TextEditingController();
+  var user = UserService.user;
+
   @override
   Widget build(BuildContext context) {
+    _emailController.text = user['userFound']['email'];
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         brightness: Brightness.light,
-        iconTheme: IconThemeData(color: Colors.black),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_outlined),
-          onPressed: () => (print("Doy atras")),
-        ),
       ),
       body: WillPopScope(
         onWillPop: () => null,
@@ -49,44 +51,24 @@ class Account extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
-              InputText(
-                controller: null,
-                label: 'Nombres',
+              TextField(
+                controller: _emailController,
+                readOnly: true,
+                decoration: InputDecoration(
+                  labelText: "Correo electronico",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
-              InputText(
-                controller: null,
-                label: 'Apellidos',
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              InputText(
-                controller: null,
-                label: 'Correo electronico',
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              InputText(
-                controller: null,
-                label: 'Número de teléfono',
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              InputText(
-                controller: null,
-                label: 'Número de documento',
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              InputText(
-                controller: null,
-                label: 'Número de documento',
+              ButtonBlue(
+                name: 'CERRAR SESIÓN',
+                onPressed: (){
+                  UserService.user = null;
+                  Navigator.pushReplacementNamed(context, 'login');
+                },
               ),
             ],
           ),

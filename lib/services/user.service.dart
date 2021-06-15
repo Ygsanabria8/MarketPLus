@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:MarketPlus/widgets/ModalLogin.dart';
 import 'package:MarketPlus/widgets/ModalRegister.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -12,6 +14,9 @@ class UserService {
 
   static UserService instance = null;
   static String API = "https://api-market-plus.herokuapp.com/api";
+  static var user;
+  static List<dynamic> productsList = [];
+
 
   static UserService getInstance() {
     if (instance == null) {
@@ -48,6 +53,8 @@ class UserService {
 
     if(resp.statusCode == 200){
       //Login successfully
+      Map<String, dynamic> userResp = jsonDecode(resp.body);
+      user = userResp;
       Navigator.pushReplacementNamed(context, 'home');
     }else if(resp.statusCode == 401){
       //bad password
@@ -94,5 +101,21 @@ class UserService {
       ModalRegister(context, 'assets/img/wrong.png', 'Ha ocurrido un error, por favor inténtalo de nuevo.',
           'INTENTALO DE NUEVO', () => {Navigator.pop(context)} );
     }
+  }
+
+  dynamic get User{
+    return user;
+  }
+
+  void addProduct(dynamic product){
+    productsList.add(product);
+  }
+
+  dynamic get ShopList{
+    return productsList;
+  }
+
+  void EmptyShopList(List<dynamic> list){
+    productsList = list;
   }
 }

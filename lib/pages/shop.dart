@@ -1,8 +1,15 @@
+import 'package:MarketPlus/services/user.service.dart';
+import 'package:MarketPlus/widgets/ItemCardShop.dart';
+import 'package:MarketPlus/widgets/ModalShop.dart';
 import 'package:MarketPlus/widgets/button-blue.dart';
-import 'package:MarketPlus/widgets/shop-card.dart';
 import 'package:flutter/material.dart';
 
 class Shop extends StatelessWidget {
+
+  UserService userService = UserService.getInstance();
+  var shopList = UserService.productsList;
+  List<dynamic> emptyList = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,11 +17,6 @@ class Shop extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         brightness: Brightness.light,
-        iconTheme: IconThemeData(color: Colors.black),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_outlined),
-          onPressed: () => (print("Doy atras")),
-        ),
       ),
       body: WillPopScope(
         onWillPop: () => null,
@@ -39,34 +41,25 @@ class Shop extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.03,
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.5,
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        ShopCard(),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01,
-                        ),
-                        ShopCard(),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01,
-                        ),
-                        ShopCard(),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01,
-                        ),
-                        ShopCard(),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01,
-                        ),
-                        ShopCard(),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01,
-                        ),
-                        ShopCard(),
-                      ],
-                    ),
-                  ),
+                  height: MediaQuery.of(context).size.height * 0.55,
+                  child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      itemCount: shopList.length,
+                      itemBuilder: (context, index) {
+                        return Row(
+                          children: [
+                            ItemCardShop(
+                              name: shopList[index]['productName'],
+                              price: shopList[index]['price'],
+                              imageUrl: shopList[index]['imageUrl'],
+                              sale: shopList[index]['sale']
+                            ),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.14,
+                            ),
+                          ],
+                        );
+                      }),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.02,
@@ -74,7 +67,9 @@ class Shop extends StatelessWidget {
                 ButtonBlue(
                   name: "REALIZAR PAGO",
                   onPressed: () => {
-                    print("Realizando compra"),
+                    userService.EmptyShopList(emptyList),
+                    shopList = [],
+                    ModalShop(context)
                   },
                 )
               ],
@@ -85,3 +80,4 @@ class Shop extends StatelessWidget {
     );
   }
 }
+
